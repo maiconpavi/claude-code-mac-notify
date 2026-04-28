@@ -1,0 +1,41 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/notify.sh 'Turn finished' Glass",
+            "async": true,
+            "timeout": 3
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/notify.sh 'Input needed' Tink",
+            "async": true,
+            "timeout": 3
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "ExitPlanMode",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/notify.sh 'Plan ready for review' Hero",
+            "async": true,
+            "timeout": 3
+          }
+        ]
+      }
+    ]
+  }
+}

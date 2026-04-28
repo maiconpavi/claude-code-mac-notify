@@ -1,0 +1,12 @@
+{
+  "name": "claude-code-mac-notify",
+  "version": "1.0.0",
+  "description": "macOS Notification Center alerts + sounds for Claude Code intervention triggers (turn finished, input needed, plan ready). Click banner to focus Claude.app.",
+  "author": {
+    "name": "Maicon Pavi",
+    "url": "https://github.com/maiconpavi"
+  },
+  "homepage": "https://github.com/maiconpavi/claude-code-mac-notify",
+  "repository": "https://github.com/maiconpavi/claude-code-mac-notify",
+  "license": "MIT"
+}
