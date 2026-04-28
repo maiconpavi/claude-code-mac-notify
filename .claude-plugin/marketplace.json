@@ -1,5 +1,6 @@
 {
   "name": "maiconpavi-plugins",
+  "description": "Maicon Pavi's personal Claude Code plugin marketplace.",
   "owner": {
     "name": "Maicon Pavi",
     "url": "https://github.com/maiconpavi"
