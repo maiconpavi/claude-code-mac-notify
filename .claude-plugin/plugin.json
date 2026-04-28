@@ -1,6 +1,6 @@
 {
   "name": "claude-code-mac-notify",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "macOS Notification Center alerts + sounds for Claude Code intervention triggers (turn finished, input needed, plan ready). Click banner to focus Claude.app.",
   "author": {
     "name": "Maicon Pavi",
