@@ -16,10 +16,15 @@ If you keep more than one Claude Code session running at once, you have probably
 
 ## Requirements
 
-- macOS (uses `terminal-notifier` and falls back to `osascript`).
-- [`terminal-notifier`](https://github.com/julienXX/terminal-notifier): `brew install terminal-notifier`. Without it the script still fires a banner via `osascript`, but the banner is not clickable.
-- [`jq`](https://stedolan.github.io/jq/): usually preinstalled on macOS via the Xcode Command Line Tools. If not: `brew install jq`.
+**Required**
+
+- macOS (the script calls `osascript`, which ships with macOS).
+- [`jq`](https://stedolan.github.io/jq/) — usually preinstalled on macOS via the Xcode Command Line Tools. If not: `brew install jq`.
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) — any reasonably recent version that supports the [`hooks`](https://code.claude.com/docs/en/hooks-guide.md) configuration in `~/.claude/settings.json` and the [plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces.md).
+
+**Optional but recommended**
+
+- [`terminal-notifier`](https://github.com/julienXX/terminal-notifier) — `brew install terminal-notifier`. **Without it the plugin still works**: it falls back to `osascript display notification` and you still get banners with sound. You only lose two things: clicking the banner does nothing (instead of bringing `Claude.app` to the foreground), and per-session banner deduplication via `-group` is unavailable.
 
 ## Install (recommended: as a plugin)
 
@@ -39,7 +44,8 @@ Then:
 If you would rather not enable a plugin:
 
 ```bash
-brew install terminal-notifier jq
+# terminal-notifier is optional — drop it if you don't want clickable banners
+brew install jq terminal-notifier
 mkdir -p ~/.claude/hooks
 curl -fsSL https://raw.githubusercontent.com/maiconpavi/claude-code-mac-notify/main/scripts/notify.sh \
   -o ~/.claude/hooks/notify.sh
