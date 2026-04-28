@@ -75,8 +75,6 @@ Then merge the entries from [`hooks/hooks.json`](hooks/hooks.json) into the `hoo
 
 Open `System Settings → Notifications → terminal-notifier` and configure:
 
-![macOS Notification Settings for terminal-notifier](docs/screenshot-notification-settings.png)
-
 | Setting | Recommended | Why |
 | --- | --- | --- |
 | **Allow notifications** | On | Required. macOS asks once on the first banner; if you missed the prompt, toggle it on here. |
